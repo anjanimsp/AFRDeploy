@@ -72,7 +72,7 @@ def index():
     return flask.render_template('index.html')
 
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     clf = joblib.load('model.pkl')
     count_vect = joblib.load('count_vect.pkl')
